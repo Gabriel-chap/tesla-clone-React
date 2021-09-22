@@ -1,24 +1,29 @@
 import React from 'react';
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
 
 function Section( { title, description, leftBtnText, rightBtnText, backgroundImg } ) {
     return (
         <Wrap bgImage={backgroundImg}>
-            <ItemText>
-                <h1>{title}</h1>
-                <p>{description}</p>
-            </ItemText>
+            <Fade bottom>
+                <ItemText>
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                </ItemText>
+            </Fade>
             <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                        {leftBtnText}
-                    </LeftButton>
-                    {rightBtnText &&
-                        <RightButton>
-                            {rightBtnText}
-                        </RightButton>
-                    }
-                </ButtonGroup>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+                        {rightBtnText &&
+                            <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                </Fade>
 
                 <DownArrow src="/images/down-arrow.svg" />
             </Buttons>
@@ -30,6 +35,7 @@ export default Section;
 
 // Styled Components
 const Wrap = styled.div`
+z-index: 10;
 width: 100vw;
 height: 100vh;
 background-image: url('/images/model-s.jpg');
@@ -46,6 +52,19 @@ background-image: ${props => `url("/images/${props.bgImage}")`}
 const ItemText = styled.div`
 padding-top: 15vh;
 text-align: center;
+
+h1 {
+    @media (max-width: 768px) {
+    font-size: 20px;
+}
+}
+
+
+p {
+    @media (max-width: 768px) {
+    font-size: 10px;
+}
+}
 `;
 
 const ButtonGroup = styled.div`
