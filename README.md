@@ -1,5 +1,5 @@
 # Tesla Website clone
-Demo: https://gabriel-chap.github.io/tesla-clone-React/
+Demo: gabrielchap-tesla-clone.netlify.app
 
 This project is a simplified front end clone of the Tesla website. It was created with React.
 
