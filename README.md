@@ -1,5 +1,5 @@
 # Tesla Website redesign
-Demo: https://gabrielchpv-tesla-clone.netlify.app
+Demo: https://tesla-redesign-gc.netlify.app/
 This project is a simplified front end redesign of the Tesla website. It was created with React.
 
 Tools used:
